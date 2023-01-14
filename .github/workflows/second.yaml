@@ -49,3 +49,16 @@ jobs:
           NAME: dkgee4          
         run: |
           echo Hay, $NAME, Pip4 a little pip.
+
+  pip5-job:
+    name: Five Pip Job
+    needs:
+      - pip-job
+      - pip2-job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print a pip5 job
+        env:           
+          NAME: dkgee5          
+        run: |
+          echo Hay, $NAME, Pip5 a little pip.
