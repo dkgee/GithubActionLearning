@@ -12,3 +12,27 @@ jobs:
           NAME: dkgee          
         run: |
           echo Hay, $NAME, Pip a little pip.
+  
+  pip2-job:
+    name: Second Pip Job
+    needs:
+      - pip-job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print a pip2 job
+        env:           
+          NAME: dkgee2          
+        run: |
+          echo Hay, $NAME, Pip2 a little pip.
+  
+  pip3-job:
+    name: Third Pip Job
+    needs:
+      - pip2-job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print a pip3 job
+        env:           
+          NAME: dkgee3          
+        run: |
+          echo Hay, $NAME, Pip3 a little pip.
