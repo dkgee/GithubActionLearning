@@ -15,3 +15,13 @@ jobs:
           LAST_NAME: Gee
         run: |
           echo Hay,baby go, $MY_VAR $FIRST_NAME $MIDDLE_NAME $LAST_NAME.
+
+  repo-echo:
+    name: Repo Echo
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print local repo name
+        env: 
+          REPO_NAME: dkgee/GithubActionLearning
+        run: |
+          echo Hay,dkgee, this repo name is $REPO_NAME.
