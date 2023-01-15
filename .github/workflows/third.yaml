@@ -16,8 +16,7 @@ jobs:
         run: |
           echo Hay,baby go, $MY_VAR $FIRST_NAME $MIDDLE_NAME $LAST_NAME.
 
-  repo-echo:
-   - name: Invoke release signing
+      - name: Invoke release signing
         env:
           SIGN_SERIVCE_URL: ${{ secrets.ACCESS_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
